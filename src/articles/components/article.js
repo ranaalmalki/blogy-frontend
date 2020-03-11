@@ -4,9 +4,9 @@ render(){
     return(
         <div className="article">
 {/* title & Content & Author */}
-<h2>Title</h2>
-<sub>Author</sub>
-<p>Content</p>
+<h2>{this.props.title}</h2>
+<sub>{this.props.author}</sub>
+<p>{this.props.content}</p>
         </div>
     )
 }
