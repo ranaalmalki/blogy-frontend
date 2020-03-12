@@ -1,6 +1,20 @@
 import React from 'react';
 import Article from './article';
+import { getAllArticles } from '../api';
 class Articles extends React.Component{
+    componentDidMount(){
+                //Make API Call 
+        getAllArticles()
+        .then((response)=>{
+this.props.setArticles(response.data.articles);
+        })
+        .catch((error)=>{
+console.log('API ERROR', error);
+        });
+        /**
+         * INDEX,SHOW, DESTROY , UPDATE,CREATE
+         */
+    }
     render(){
         let allArticles =<h4>No Articles! </h4>;
         if(this.props.articles.length >0){

@@ -5,8 +5,9 @@ API
 ...
 ...
 Components
-App State = [Article]
-  Articles(List Container)
+App State = [Article] addArticle =()=>{}
+  Articles(List Container) => Make API  CALL TO /api/articles
+                           => setState on the APP
     Article (List Item)
       
 
